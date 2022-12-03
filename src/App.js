@@ -7,7 +7,7 @@ import logoSmall from './images/logo/small.svg';
 import postThumnailDesktop from './images/post_thumbnail/desktop.png'
 import iconPlus from './images/icon/plus.svg';
 import iconMinus from './images/icon/minus.svg';
-import postThumbnailCircle from './images/post_thumbnail/circle.svg';
+import postThumbnailCircle from './images/post_thumbnail/circle.png';
 
 function App() {
   const likesCounter = '37';
@@ -74,15 +74,15 @@ function App() {
                 <ul>
                   <li>
                     <img src={postThumbnailCircle} />
-                    <h3>r/WhitePeopleTwitter</h3>
+                    <a href="#">r/WhitePeopleTwitter</a>
                   </li>
                   <li>
                     <img src={postThumbnailCircle} />
-                    <h3>r/WhitePeopleTwitter</h3>
+                    <a href="#">r/WhitePeopleTwitter</a>
                   </li>
                   <li>
                     <img src={postThumbnailCircle} />
-                    <h3>r/WhitePeopleTwitter</h3>
+                    <a href="#">r/WhitePeopleTwitter</a>
                   </li>
                 </ul>
               </div>
