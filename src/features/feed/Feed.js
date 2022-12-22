@@ -1,56 +1,40 @@
-import postThumnailDesktop from '../../images/post_thumbnail/desktop.png'
-import iconPlus from '../../images/icon/plus.svg';
-import iconMinus from '../../images/icon/minus.svg';
-import {
-    createBrowserRouter,
-    RouterProvider,
-    Route,
-    Link
-  } from "react-router-dom";
+/** @jsxImportSource @emotion/react */
+// import { css } from '@emotion/react'
+
+import Article from './components/Article';
+
+// import {
+//     createBrowserRouter,
+//     RouterProvider,
+//     Route,
+//     Link
+//   } from "react-router-dom";
 
 export default function Home(){
-    const likesCounter = 37;
+  const posts = [
+    {
+      title: 'Post title',
+      link: 'post/:id',
+      likesCounter: 37
+    },
+    {
+      title: 'Post title 123',
+      link: 'post/:id',
+      likesCounter: 45
+    },{
+      title: 'Post title 456',
+      link: 'post/:id',
+      likesCounter: 7
+    }
+  ]
+  const renderedPosts = [];
     return(
         <section>
-          <article>
-            <h3>Musk reinstates Trump's suspended Twitter account following poll</h3>
-            <Link to={'post/:id'}>
-              <img src={postThumnailDesktop} />
-            </Link>
-            <div>
-              <div>
-                <button><img src={iconPlus} /></button>
-                <span>{likesCounter}</span>
-                <button><img src={iconMinus} /></button>
-              </div>
-            </div>
-          </article>
-          <article>
-            <h3>Musk reinstates Trump's suspended Twitter account following poll</h3>
-            <Link to={'post/:id'}>
-              <img src={postThumnailDesktop} />
-            </Link>
-            <div>
-              <div>
-                <button><img src={iconPlus} /></button>
-                <span>{likesCounter}</span>
-                <button><img src={iconMinus} /></button>
-              </div>
-            </div>
-          </article>
-          <article>
-            <h3>Musk reinstates Trump's suspended Twitter account following poll</h3>
-            <Link to={'post/:id'}>
-              <img src={postThumnailDesktop} />
-            </Link>
-            <div>
-              <div>
-                <button><img src={iconPlus} /></button>
-                <span>{likesCounter}</span>
-                <button><img src={iconMinus} /></button>
-              </div>
-            </div>
-          </article>
+
+         { posts.forEach((post) => {
+            renderedPosts.push(<Article title={post.title} link={post.link} likesCounter={post.likesCounter}/>)
+          })} 
+          {renderedPosts}
         </section>
     )
 }

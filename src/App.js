@@ -11,16 +11,15 @@ import postThumbnailCircle from './images/post_thumbnail/circle.png';
 
 import {
   Outlet,
-  NavLink,
+  // NavLink,
   Link,
-  useLoaderData,
-  Form,
-  redirect,
+  // useLoaderData,
+  // Form,
+  // redirect,
 } from "react-router-dom";
 
 
 function App() {
-  const likesCounter = '37';
   return (
     <div className="App">
     <header css={css`
@@ -37,7 +36,7 @@ function App() {
       overflow:clip;
     `}>
       <Link to={'/'}>
-        <img src={logo} />
+        <img src={logo} alt="logo"/>
       </Link>
     </div>
     <form 
@@ -67,10 +66,12 @@ function App() {
         background-color: transparent;
         display: flex;
       `}
-      ><img src={iconSearch} /></button>
+      ><img src={iconSearch} alt="icon-search"/></button>
     </form>
   </header>
-  <main>
+  <main css={css`
+    padding:64px 0;
+  `}>
         <Outlet />
     <aside>
         <aside>
@@ -78,16 +79,16 @@ function App() {
             <div>
                 <ul>
                 <li>
-                    <img src={postThumbnailCircle} />
-                    <a href="#">r/WhitePeopleTwitter</a>
+                    <img src={postThumbnailCircle} alt="WhitePeopleTwitter"/>
+                    <a href="/">r/WhitePeopleTwitter</a>
                 </li>
                 <li>
-                    <img src={postThumbnailCircle} />
-                    <a href="#">r/WhitePeopleTwitter</a>
+                    <img src={postThumbnailCircle} alt="WhitePeopleTwitter" />
+                    <a href="/">r/WhitePeopleTwitter</a>
                 </li>
                 <li>
-                    <img src={postThumbnailCircle} />
-                    <a href="#">r/WhitePeopleTwitter</a>
+                    <img src={postThumbnailCircle} alt="WhitePeopleTwitter"/>
+                    <a href="/">r/WhitePeopleTwitter</a>
                 </li>
                 </ul>
             </div>
@@ -96,7 +97,7 @@ function App() {
   </main>
   <footer>
     <div>
-      <img src={logoSmall} />
+      <img src={logoSmall} alt="footer-logo"/>
     </div>
     <div>
      2022 &copy; All rights reserved
