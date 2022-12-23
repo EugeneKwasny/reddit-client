@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 // import { css } from '@emotion/react'
 
-import Article from './components/Article';
+import Article from '../../components/Article';
 
 // import {
 //     createBrowserRouter,
@@ -26,15 +26,11 @@ export default function Home(){
       link: 'post/:id',
       likesCounter: 7
     }
-  ]
-  const renderedPosts = [];
-    return(
-        <section>
+  ];
 
-         { posts.forEach((post) => {
-            renderedPosts.push(<Article title={post.title} link={post.link} likesCounter={post.likesCounter}/>)
-          })} 
-          {renderedPosts}
-        </section>
-    )
+  return(
+      <section>
+        {posts.map((post, index) => <Article key={index} title={post.title} link={post.link} likesCounter={post.likesCounter}/>)} 
+      </section>
+  )
 }

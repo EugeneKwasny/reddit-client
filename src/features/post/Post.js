@@ -1,6 +1,4 @@
-import postThumnailDesktop from '../../images/post_thumbnail/desktop.png'
-import iconPlus from '../../images/icon/plus.svg';
-import iconMinus from '../../images/icon/minus.svg';
+import Images from '../../components/Images';
 
 export default function Post()
 {
@@ -8,14 +6,12 @@ export default function Post()
     return (
         <article>
             <h3>Musk reinstates Trump's suspended Twitter account following poll</h3>
-            <a href="#">
-              <img src={postThumnailDesktop} />
-            </a>
+            <img src={Images.postThumbnail.desktop} alt="Musk reinstates Trump's suspended Twitter account following poll"/>
             <div>
               <div>
-                <button><img src={iconPlus} /></button>
+                <button><img src={Images.icon.plus} alt="icon-plus"/></button>
                 <span>{likesCounter}</span>
-                <button><img src={iconMinus} /></button>
+                <button><img src={Images.icon.minus} alt="icon-minus"/></button>
               </div>
             </div>
         </article>
